@@ -26,16 +26,16 @@ badge();
 
 // ===== Productos iniciales =====
 const PRODUCTS = [
-  {id:1,n:"Control Pro",p:39990,img:"https://via.placeholder.com/400x250?text=Control+Pro"},
-  {id:2,n:"Auriculares X",p:29990,img:"https://via.placeholder.com/400x250?text=Auriculares+X"},
-  {id:3,n:"Consola Mini",p:199990,img:"https://via.placeholder.com/400x250?text=Consola+Mini"},
-  {id:4,n:"Teclado Mecánico",p:49990,img:"https://via.placeholder.com/400x250?text=Teclado+Mecánico"},
-  {id:5,n:"Mouse Gamer",p:24990,img:"https://via.placeholder.com/400x250?text=Mouse+Gamer"},
-  {id:6,n:"Monitor 24\"",p:159990,img:"https://via.placeholder.com/400x250?text=Monitor+24\""},
-  {id:7,n:"Silla Gamer",p:89990,img:"https://via.placeholder.com/400x250?text=Silla+Gamer"},
-  {id:8,n:"Tarjeta Gráfica",p:399990,img:"https://via.placeholder.com/400x250?text=GPU"},
-  {id:9,n:"Disco SSD",p:79990,img:"https://via.placeholder.com/400x250?text=SSD"},
-  {id:10,n:"Fuente de Poder",p:49990,img:"https://via.placeholder.com/400x250?text=Fuente+Poder"}
+  {id:1,n:"Control  Xbox", p:59000, img:"img/xbox.webp"},
+  {id:2,n:"Auriculares Logitech",p:60000,img:"img/logi.jpeg"},
+  {id:3,n:"Escritorio Cougar",p:150000,img:"img/cougar.avif"},
+  {id:4,n:"Teclado HyperX",p:49990,img:"img/teclado.jpg"},
+  {id:5,n:"Mouse Glorious",p:24990,img:"img/glorious.jpg"},
+  {id:6,n:"Monitor 24",p:159990,img:"img/monitor.jpg"},
+  {id:7,n:"Silla Gamer",p:89990,img:"img/silla.jpg"},
+  {id:8,n:"RTX 4060",p:399990,img:"img/4060.jpg"},
+  {id:9,n:"m.2",p:79990,img:"img/m.2.jpg"},
+  {id:10,n:"Fuente de Poder",p:49990,img:"img/fuente.jpg"},
 ];
 
 

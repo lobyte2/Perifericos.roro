@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Productos Admin</title>
+  <link href="styles.css" rel="stylesheet"/>
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="index.html"><strong>Tienda</strong></a>
+      <nav style="display:flex; gap:10px; align-items:center">
+        <a href="productos.html">Productos</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="registro.html">Registro</a>
+        <a href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+        <span class="badge">🛒 <span id="cart-badge">0</span></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <h1>Gestión de Productos</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody id="lista-productos">
+      </tbody>
+    </table>
+
+    <h2>Nuevo producto</h2>
+    <form class="form" id="form-productos">
+      <input class="input" name="nombre" placeholder="Nombre"/>
+      <input class="input" name="precio" placeholder="Precio" type="number"/>
+      <input class="input" name="img" placeholder="URL Imagen"/>
+      <button class="btn">Agregar</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container footer">
+    © 2025 Mi Tienda
+  </footer>
+
+</body>
+</html>

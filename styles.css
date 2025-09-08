@@ -10,7 +10,7 @@
 body {
   font-family: system-ui, Arial, sans-serif;
   line-height: 1.4;
-  background: #f7f7f8;
+  background: #ffffff;
   color: #222;
 }
 
@@ -33,15 +33,17 @@ img {
   padding: 16px;
 }
 
+
 /* =========================
    Header & Navegación
 ========================= */
 .header {
-  background: #fff;
+  background: #414141;
   border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
   z-index: 10;
+  color: #fff;
 }
 
 .nav {
@@ -58,7 +60,7 @@ img {
 }
 
 .nav a:hover {
-  background: #eef2ff;
+  background: rgb(79, 131, 190);
 }
 
 .badge {
@@ -85,8 +87,8 @@ img {
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border: 1px solid #858585;
   border-radius: 12px;
   padding: 12px;
   display: flex;
@@ -98,7 +100,7 @@ img {
 .btn {
   border: 0;
   background: #111;
-  color: #fff;
+  color: #ffffff;
   padding: 8px 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -107,6 +109,7 @@ img {
 .card button:hover,
 .btn:hover {
   opacity: 0.9;
+  background-color: rgb(79, 131, 190);
 }
 
 /* =========================

@@ -26,10 +26,18 @@ badge();
 
 // ===== Productos iniciales =====
 const PRODUCTS = [
-  { id: 1, n: "Control Pro", p: 39990, img: "https://via.placeholder.com/400x250?text=Control" },
-  { id: 2, n: "Auriculares X", p: 29990, img: "https://via.placeholder.com/400x250?text=Auriculares" },
-  { id: 3, n: "Consola Mini", p: 199990, img: "https://via.placeholder.com/400x250?text=Consola" }
+  {id:1,n:"Control Pro",p:39990,img:"https://via.placeholder.com/400x250?text=Control+Pro"},
+  {id:2,n:"Auriculares X",p:29990,img:"https://via.placeholder.com/400x250?text=Auriculares+X"},
+  {id:3,n:"Consola Mini",p:199990,img:"https://via.placeholder.com/400x250?text=Consola+Mini"},
+  {id:4,n:"Teclado Mecánico",p:49990,img:"https://via.placeholder.com/400x250?text=Teclado+Mecánico"},
+  {id:5,n:"Mouse Gamer",p:24990,img:"https://via.placeholder.com/400x250?text=Mouse+Gamer"},
+  {id:6,n:"Monitor 24\"",p:159990,img:"https://via.placeholder.com/400x250?text=Monitor+24\""},
+  {id:7,n:"Silla Gamer",p:89990,img:"https://via.placeholder.com/400x250?text=Silla+Gamer"},
+  {id:8,n:"Tarjeta Gráfica",p:399990,img:"https://via.placeholder.com/400x250?text=GPU"},
+  {id:9,n:"Disco SSD",p:79990,img:"https://via.placeholder.com/400x250?text=SSD"},
+  {id:10,n:"Fuente de Poder",p:49990,img:"https://via.placeholder.com/400x250?text=Fuente+Poder"}
 ];
+
 
 // ===== Formato de dinero =====
 function money(x) {
@@ -37,13 +45,14 @@ function money(x) {
 }
 
 // ===== Render productos en lista =====
-function renderProducts(sel) {
+function renderProducts(sel, limit = null) {
   const el = $(sel);
   if (!el) return;
 
   const productos = JSON.parse(localStorage.getItem("productos") || JSON.stringify(PRODUCTS));
+  const lista = limit ? productos.slice(0, limit) : productos;
 
-  el.innerHTML = productos.map(pr =>
+  el.innerHTML = lista.map(pr =>
     `<article class="card">
       <img src="${pr.img}" alt="${pr.n}">
       <strong>${pr.n}</strong>
@@ -52,9 +61,9 @@ function renderProducts(sel) {
         <a class="btn" href="producto.html?id=${pr.id}">Ver</a>
         <button onclick="addToCart(${pr.id})">Añadir</button>
       </div>
-    </article>`
-  ).join("");
+    </article>`).join("");
 }
+
 
 // ===== Render producto detalle =====
 function renderProducto() {
@@ -214,14 +223,13 @@ function hookFormProductos() {
 
 // ===== Boot =====
 document.addEventListener("DOMContentLoaded", () => {
-  renderProducts("#lista");
-  renderProducts("#lista-home");
-  renderProducto();
+  renderProducts("#lista");         
+  renderProducts("#lista-home", 3);
   hookLogin();
   hookRegistro();
   hookContacto();
   renderUsuarios();
   hookFormUsuarios();
-  renderProductosAdmin();
+  renderProductosAdmin(); 
   hookFormProductos();
 });

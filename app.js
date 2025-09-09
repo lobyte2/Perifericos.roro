@@ -1,7 +1,7 @@
 // ===== Utils =====
 const $ = s => document.querySelector(s);
 const params = new URLSearchParams(location.search);
-const domains = ["@duoc.cl", "@profesor.duoc.cl", "@gmail.com"];
+const domains = ["@duocuc.cl", "@profesor.cl", "@gmail.com"];
 const ok = m => ({ ok: true, msg: m });
 const fail = m => ({ ok: false, msg: m });
 
@@ -24,27 +24,27 @@ const badge = () => {
 
 badge();
 
-// ===== Productos iniciales =====
+// Productos
 const PRODUCTS = [
-  {id:1,n:"Control  Xbox", p:59000, img:"img/xbox.webp"},
-  {id:2,n:"Auriculares Logitech",p:60000,img:"img/logi.jpeg"},
-  {id:3,n:"Escritorio Cougar",p:150000,img:"img/cougar.avif"},
-  {id:4,n:"Teclado HyperX",p:49990,img:"img/teclado.jpg"},
-  {id:5,n:"Mouse Glorious",p:24990,img:"img/glorious.jpg"},
-  {id:6,n:"Monitor 24",p:159990,img:"img/monitor.jpg"},
-  {id:7,n:"Silla Gamer",p:89990,img:"img/silla.jpg"},
-  {id:8,n:"RTX 4060",p:399990,img:"img/4060.jpg"},
-  {id:9,n:"SSD M.2",p:79990,img:"img/m.2.jpg"},
-  {id:10,n:"Fuente de Poder",p:49990,img:"img/fuente.jpg"},
+  {id:1,n:"Control  Xbox", p:59000, img:"img/xbox.webp", desc:"Control inalámbrico de Xbox con diseño ergonómico y vibración háptica."},
+  {id:2,n:"Auriculares Logitech",p:60000,img:"img/logi.jpeg",desc:"Auriculares Logitech con micrófono incorporado y sonido envolvente."},
+  {id:3,n:"Escritorio Cougar",p:150000,img:"img/cougar.avif",desc:"Escritorio gamer Cougar con superficie amplia y soporte para accesorios."},
+  {id:4,n:"Teclado HyperX",p:49990,img:"img/teclado.jpg", desc:"Teclado mecánico HyperX con retroiluminación RGB y switches precisos."},
+  {id:5,n:"Mouse Glorious",p:24990,img:"img/glorious.jpg",desc:"Mouse Glorious ultraligero con sensor de alta precisión y diseño perforado."},
+  {id:6,n:"Monitor 24",p:159990,img:"img/monitor.jpg", desc:"Monitor de 24 pulgadas Full HD con alta tasa de refresco y bordes delgados."},
+  {id:7,n:"Silla Gamer",p:89990,img:"img/silla.jpg",desc:"Silla gamer ergonómica con soporte lumbar y ajuste de altura reclinable."},
+  {id:8,n:"RTX 4060",p:399990,img:"img/4060.jpg", desc:"Tarjeta gráfica NVIDIA RTX 4060 con 8GB GDDR6 para gaming de última generación."},
+  {id:9,n:"SSD M.2",p:79990,img:"img/m.2.jpg",desc:"Unidad SSD M.2 NVMe de alta velocidad ideal para gaming y multitarea."},
+  {id:10,n:"Fuente de Poder",p:49990,img:"img/fuente.jpg", desc:"Fuente de poder 600W certificada 80+ Bronze, silenciosa y eficiente."},
 ];
 
 
-// ===== Formato de dinero =====
+// Formato moneda
 function money(x) {
   return Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP" }).format(x);
 }
 
-// ===== Render productos en lista =====
+// Render productos en lista 
 function renderProducts(sel, limit = null) {
   const el = $(sel);
   if (!el) return;
@@ -65,7 +65,7 @@ function renderProducts(sel, limit = null) {
 }
 
 
-// ===== Render producto detalle =====
+// Render producto detalle
 function renderProducto() {
   const el = $("#detalle");
   if (!el) return;
@@ -85,13 +85,14 @@ function renderProducto() {
       <div>
         <h2>${pr.n}</h2>
         <p style="margin:8px 0">${money(pr.p)}</p>
+        <p style="margin:12px 0; color:#555;">${pr.desc}</p>
         <button class="btn" onclick="addToCart(${pr.id})">Añadir al carrito</button>
       </div>
     </div>
   `;
 }
 
-// ===== Validaciones formularios =====
+// Validaciones formularios 
 function emailVal(v) {
   if (!v) return fail("Requerido");
   if (v.length > 100) return fail("Máx 100");
@@ -117,7 +118,7 @@ function setErr(id, r) {
   e.textContent = r.ok ? "" : r.msg;
 }
 
-// ===== Hook login =====
+// login
 function hookLogin() {
   const f = $("#form-login");
   if (!f) return;
@@ -135,7 +136,7 @@ function hookLogin() {
   });
 }
 
-// ===== Hook registro =====
+// registro
 function hookRegistro() {
   const f = $("#form-reg");
   if (!f) return;
@@ -155,7 +156,7 @@ function hookRegistro() {
   });
 }
 
-// ===== Hook contacto =====
+// contacto
 function hookContacto() {
   const f = $("#form-contacto");
   if (!f) return;
@@ -175,7 +176,7 @@ function hookContacto() {
   });
 }
 
-// ===== Admin usuarios =====
+// Admin-usuarios 
 function renderUsuarios() {
   const tbody = document.querySelector("#lista-usuarios");
   if (!tbody) return;
@@ -198,7 +199,7 @@ function hookFormUsuarios() {
   });
 }
 
-// ===== Admin productos =====
+// Admin-productos
 function renderProductosAdmin() {
   const tbody = document.querySelector("#lista-productos");
   if (!tbody) return;
@@ -220,8 +221,14 @@ function hookFormProductos() {
     renderProductosAdmin();
   });
 }
+// vincular detalle producto
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.querySelector("#detalle")) {
+    renderProducto();
+  }
+});
 
-// ===== Boot =====
+// Para inicializar la app 
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts("#lista");         
   renderProducts("#lista-home", 3);

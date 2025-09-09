@@ -34,7 +34,7 @@ const PRODUCTS = [
   {id:6,n:"Monitor 24",p:159990,img:"img/monitor.jpg"},
   {id:7,n:"Silla Gamer",p:89990,img:"img/silla.jpg"},
   {id:8,n:"RTX 4060",p:399990,img:"img/4060.jpg"},
-  {id:9,n:"m.2",p:79990,img:"img/m.2.jpg"},
+  {id:9,n:"SSD M.2",p:79990,img:"img/m.2.jpg"},
   {id:10,n:"Fuente de Poder",p:49990,img:"img/fuente.jpg"},
 ];
 

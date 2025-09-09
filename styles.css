@@ -172,11 +172,29 @@ img {
    Blog Post
 ========================= */
 .blog-post {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
+}
+
+.img.ssd {
+  margin-top: 12px;
+  border-radius: 8px;
+  max-width: 50%;
+}
+
+.img.mouse {
+  margin-top: 12px;
+  border-radius: 8px;
+  max-width: 60%;
+}
+
+.img.teclado {
+  margin-top: 12px;
+  border-radius: 8px;
+  max-width: 60%;
 }
 
 .blog-post h2 {

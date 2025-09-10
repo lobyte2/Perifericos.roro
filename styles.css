@@ -12,7 +12,10 @@ body {
   line-height: 1.4;
   background: #ffffff;
   color: #222;
+  background-image: url(img/fondo.png);
+  background-position: center;
 }
+
 
 a {
   color: inherit;
@@ -88,12 +91,12 @@ img {
 
 .card {
   background: #ffffff;
-  border: 1px solid #858585;
-  border-radius: 12px;
-  padding: 12px;
+  border: 2px solid #858585;
+  border-radius: 10px;
+  padding: 3px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .card button,
@@ -211,7 +214,8 @@ img {
    Footer
 ========================= */
 .footer {
-  margin: 28px 0;
-  color: #6b7280;
+  margin: 0px;
+  color: #000000;
   font-size: 0.9rem;
+  margin-top: 150px;
 }

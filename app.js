@@ -1,11 +1,11 @@
-// ===== Utils =====
+// Utils 
 const $ = s => document.querySelector(s);
 const params = new URLSearchParams(location.search);
 const domains = ["@duocuc.cl", "@profesor.cl", "@gmail.com"];
 const ok = m => ({ ok: true, msg: m });
 const fail = m => ({ ok: false, msg: m });
 
-// ===== Carrito =====
+// Carrito 
 const getCart = () => JSON.parse(localStorage.getItem("cart") || "[]");
 const setCart = c => localStorage.setItem("cart", JSON.stringify(c));
 
@@ -130,7 +130,7 @@ function hookLogin() {
     setErr("#e-email", r1);
     setErr("#e-pass", r2);
     if (r1.ok && r2.ok) {
-      alert("Login OK");
+      alert("Inicio de sesión exitoso");
       location.href = "index.html";
     }
   });

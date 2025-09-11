@@ -1,6 +1,4 @@
-/* =========================
-   Reglas Globales
-========================= */
+/*Reglas Globales*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,9 +25,7 @@ img {
   display: block;
 }
 
-/* =========================
-   Contenedores
-========================= */
+/*Contenedores*/
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -37,9 +33,7 @@ img {
 }
 
 
-/* =========================
-   Header & Navegación
-========================= */
+/*Header & Navegación*/
 .header {
   background: #414141;
   border-bottom: 1px solid #e5e7eb;
@@ -73,16 +67,12 @@ img {
   font-size: 0.8rem;
 }
 
-/* =========================
-   Hero / Secciones Especiales
-========================= */
+/* Hero*/
 .hero {
   padding: 32px 0;
 }
 
-/* =========================
-   Grid / Cards
-========================= */
+/*Cards*/
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -123,9 +113,7 @@ img {
   background-color: rgb(79, 131, 190);
 }
 
-/* =========================
-   Formularios
-========================= */
+/*Formularios*/
 .input {
   width: 100%;
   padding: 10px;
@@ -156,9 +144,7 @@ img {
   gap: 6px;
 }
 
-/* =========================
-   Tablas
-========================= */
+/*Tablas*/
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -171,9 +157,7 @@ img {
   text-align: left;
 }
 
-/* =========================
-   Blog Post
-========================= */
+/* Blog Post*/
 .blog-post {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -210,12 +194,29 @@ img {
   color: #444;
 }
 
-/* =========================
-   Footer
-========================= */
+/* Footer*/
 .footer {
   margin: 0px;
   color: #000000;
   font-size: 0.9rem;
   margin-top: 150px;
+}
+.faq {
+  border: 1px solid #000;    /* borde negro */
+  padding: 15px;              /* espacio dentro del recuadro */
+  background-color: #ffffff; /* fondo gris claro */
+  margin: 20px 0;             /* separación arriba y abajo */
+  border-radius: 5px;         /* bordes ligeramente redondeados */
+}
+
+.faq h2 {
+  margin-bottom: 10px;
+}
+
+.faq summary {
+  font-weight: bold;
+}
+
+.faq p {
+  margin: 5px 0 10px 0;
 }
